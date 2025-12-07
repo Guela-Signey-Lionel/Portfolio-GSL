@@ -146,7 +146,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src={getImagePath('/images/profile_photo_20251205_111828.png')} 
+                src={getImagePath('/images/project.jpg')} 
                 alt="GSL Portfolio" 
                 className="w-10 h-10 rounded-full border-2 border-primary/20"
               />
@@ -222,7 +222,7 @@ const Index = () => {
           <div className="animate-fade-in-up">
             <div className="mb-8">
               <img 
-                src={getImagePath('/images/profile_photo_20251205_111828.png')} 
+                src={getImagePath('/images/project.jpg')} 
                 alt="GUELA Signey Lionel" 
                 className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-primary/20 shadow-elegant animate-float"
               />
@@ -685,7 +685,7 @@ const Index = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src={getImagePath('/images/profile_photo_20251205_111828.png')} 
+                  src={getImagePath('/images/project.jpg')} 
                   alt="SLG Portfolio" 
                   className="w-12 h-12 rounded-full border-2 border-primary/20"
                 />
