@@ -30,6 +30,12 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Fonction pour gérer les chemins d'images avec le base path de GitHub Pages
+  const getImagePath = (imagePath: string) => {
+    const basePath = import.meta.env.BASE_URL || '/';
+    return `${basePath.replace(/\/$/, '')}${imagePath}`;
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about', 'skills', 'experience', 'services', 'contact'];
@@ -107,21 +113,21 @@ const Index = () => {
       description: 'Site web institutionnel pour l\'association É Maï Oko avec présentation des activités et services.',
       url: 'https://site-emai-oko.onrender.com',
       technologies: ['React', 'CSS', 'JavaScript'],
-      image: '/images/affiche e mai oko.jpeg'
+      image: getImagePath('/images/affiche e mai oko.jpeg')
     },
     {
       title: 'Hostel Management System',
       description: 'Plateforme complète pour la gestion des réservations de chambres, salles de conférence et services traiteur.',
       url: 'https://lunahotel.onrender.com',
       technologies: ['React', 'Node.js', 'PostgreSQL'],
-      image: '/images/hotel.jpeg'
+      image: getImagePath('/images/hotel.jpeg')
     },
     {
       title: 'SigneyTech E-Commerce',
       description: 'Site e-commerce pour la vente d\'appareils électroniques et électroménagers avec système de commande.',
       url: 'https://signeytech.onrender.com',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: '/images/électronique.jpg'
+      image: getImagePath('/images/électronique.jpg')
     }
   ];
 
@@ -140,7 +146,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
-                src="/images/profile_photo_20251205_111828.png" 
+                src={getImagePath('/images/profile_photo_20251205_111828.png')} 
                 alt="GSL Portfolio" 
                 className="w-10 h-10 rounded-full border-2 border-primary/20"
               />
@@ -216,7 +222,7 @@ const Index = () => {
           <div className="animate-fade-in-up">
             <div className="mb-8">
               <img 
-                src="/images/profile_photo_20251205_111828.png" 
+                src={getImagePath('/images/profile_photo_20251205_111828.png')} 
                 alt="GUELA Signey Lionel" 
                 className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-primary/20 shadow-elegant animate-float"
               />
@@ -679,7 +685,7 @@ const Index = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/images/profile_photo_20251205_111828.png" 
+                  src={getImagePath('/images/profile_photo_20251205_111828.png')} 
                   alt="SLG Portfolio" 
                   className="w-12 h-12 rounded-full border-2 border-primary/20"
                 />
